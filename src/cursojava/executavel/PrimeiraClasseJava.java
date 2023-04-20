@@ -351,7 +351,7 @@ public class PrimeiraClasseJava {
 		}
 		
 		
-		for(Aluno aluno: alunos) {
+		/*for(Aluno aluno: alunos) {
 			
 			if(aluno.getNome().equalsIgnoreCase("Max")) {
 				
@@ -375,6 +375,25 @@ public class PrimeiraClasseJava {
 				System.out.println(disciplina.getDisciplina());
 				
 			}
+		}*/
+		
+		for (int pos =0;pos < alunos.size();pos++) {
+			
+			Aluno aluno = alunos.get(pos);
+			
+			System.out.println("Aluno = "+aluno.getNome());
+			System.out.println("Média = "+aluno.getMediaNota());
+			System.out.println("Resultado = "+aluno.getAlunoAprovado2());
+			
+			
+			for(int posd =0;posd<aluno.getDisciplinas().size();posd++) {
+				
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+				
+				System.out.println("Materia = "+disc.getDisciplina()+" Nota = "+disc.getNota());
+			}
+			System.out.println("============================================");
+			
 		}
 		
 		
