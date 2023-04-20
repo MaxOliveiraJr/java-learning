@@ -1,0 +1,17 @@
+[33mcommit 0eda94a60eea7dd75225f81adee8a120c29a7853[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Max Oliveira <max-oliveira@outlook.com.br>
+Date:   Thu Apr 20 09:44:26 2023 -0300
+
+    percorrendo lista de array por posição
+
+[33mcommit e84d4fcf370b2734a1475e5371295378cb70cd73[m
+Author: Max Oliveira <max-oliveira@outlook.com.br>
+Date:   Wed Apr 19 19:45:43 2023 -0300
+
+    create, loop para remover disciplica, criação de lista de alunos, acessando alunos e suas disciplinas
+
+[33mcommit e5d8db7c48d26a6c1c85a6b4867e64f7275ae0bf[m
+Author: Max Oliveira <max-oliveira@outlook.com.br>
+Date:   Wed Apr 19 15:37:51 2023 -0300
+
+    first commit
