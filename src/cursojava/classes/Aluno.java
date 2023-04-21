@@ -6,15 +6,8 @@ import java.util.Objects;
 
 import cursojava.constantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa{
 
-	public String nome;
-	public int idade;
-	public String dataNascimento;
-	private String registroGeral;
-	private String numeroCPF;
-	private String nomePai;
-	private String nomeMae;
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
@@ -28,23 +21,22 @@ public class Aluno {
 	public void setDisciplinas(List<Disciplina> disciplinas) {	
 		this.disciplinas = disciplinas;
 	}
-	
 	public Aluno() {}
-
+	
 	public Aluno(String nomePadrao) {
-		this.nome = nomePadrao;
+		super.nome = nomePadrao;
 	}
 	
 	public Aluno(String nomePadrao,int idadePadrao) {
-		this.nome = nomePadrao;
-		this.idade = idadePadrao;
+		super.nome = nomePadrao;
+		idade = idadePadrao; // Como a classe aluno não tem um atributo nome posso usar sem o super.idade 
 	}
 	
 	
 	// Metodos Setters e Getters
 	
 	public void setNome(String nome) {
-		this.nome = nome;
+		super.nome = nome;
 	}
 	
 	public int getIdade() {
@@ -52,7 +44,7 @@ public class Aluno {
 	}
 
 	public void setIdade(int idade) {
-		this.idade = idade;
+		super.idade = idade;
 	}
 
 	public String getDataNascimento() {

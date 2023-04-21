@@ -259,13 +259,18 @@ public class PrimeiraClasseJava {
 		
 		aluno4.getDisciplinas().add(disciplina1);
 		
-		System.out.println(aluno4.nome);
-		System.out.println(aluno4.idade);
+		System.out.println(aluno4.getNome());
+		System.out.println(aluno4.getIdade());
 		System.out.println(aluno4.toString());
 		System.out.println(aluno4.getMediaNota());
 		
 		
 		System.out.println("==========================================");
+		
+		String login = JOptionPane.showInputDialog("Informe o Login");
+		String senha = JOptionPane.showInputDialog("Informe a Senha");
+		
+		if(login.equals("admin") && senha.equalsIgnoreCase("admin")) {
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
@@ -463,7 +468,7 @@ public class PrimeiraClasseJava {
 			
 		}*/
 		
-		
+		}
 		
 		/* Eguals e Hascode */
 		
