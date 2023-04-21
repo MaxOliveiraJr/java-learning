@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
 	
@@ -267,9 +268,11 @@ public class PrimeiraClasseJava {
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		
+		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
+		List<Aluno> alunosReprovado = new ArrayList<Aluno>();
+		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
 		 
-		for(int qtd = 0;qtd<=1;qtd++) {
+		for(int qtd = 0;qtd<=5;qtd++) {
 			
 			
 			
@@ -350,6 +353,38 @@ public class PrimeiraClasseJava {
 		
 		}
 		
+		for(Aluno aluno: alunos) {/*Separação em Lista*/
+			
+			
+			if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)) {
+				
+				alunosAprovados.add(aluno);
+			}else if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
+				alunosRecuperacao.add(aluno);
+			}else {
+				alunosReprovado.add(aluno);
+			}
+			
+		}
+		
+		System.out.println("---------------------------");
+		for(Aluno aluno: alunosAprovados) {
+			
+			System.out.println("Resultado = "+ aluno.getNome() +" "+ aluno.getAlunoAprovado2() + " com média = "+ aluno.getMediaNota());
+		}
+		
+		System.out.println("---------------------------");
+		for(Aluno aluno: alunosReprovado) {
+			
+			System.out.println("Resultado = "+ aluno.getNome() +" "+ aluno.getAlunoAprovado2() + " com média = "+ aluno.getMediaNota());
+		}
+		
+		System.out.println("---------------------------");
+		for(Aluno aluno: alunosRecuperacao) {
+			
+			System.out.println("Resultado = "+ aluno.getNome() +" "+ aluno.getAlunoAprovado2() + " com média = "+ aluno.getMediaNota());
+		}
+		
 		
 		/*for(Aluno aluno: alunos) {
 			
@@ -377,7 +412,7 @@ public class PrimeiraClasseJava {
 			}
 		}*/
 		
-		for (int pos =0;pos < alunos.size();pos++) {
+		/*for (int pos =0;pos < alunos.size();pos++) {
 			
 			Aluno aluno = alunos.get(pos);
 			
@@ -407,7 +442,7 @@ public class PrimeiraClasseJava {
 			}
 			System.out.println("============================================");
 			
-		}
+		}*/
 		
 		
 		
