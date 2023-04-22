@@ -236,7 +236,7 @@ public class PrimeiraClasseJava {
 		*/
 		
 		//Não existe
-		Aluno 	aluno1;
+		Aluno aluno1;
 		
 		
 		//Existe;

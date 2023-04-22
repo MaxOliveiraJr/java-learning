@@ -1,6 +1,6 @@
 package cursojava.classes;
 
-public class Pessoa {
+public abstract class Pessoa {
 
 	protected String nome;
 	protected int idade;
@@ -9,6 +9,10 @@ public class Pessoa {
 	protected String numeroCPF;
 	protected String nomePai;
 	protected String nomeMae;
+	
+	
+	public abstract double salario();
+	
 	public String getNome() {
 		return nome;
 	}
@@ -50,6 +54,10 @@ public class Pessoa {
 	}
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
+	}
+	public boolean pessoaMaiorIdade() {
+		
+		return idade >=18;
 	}
 	
 }
