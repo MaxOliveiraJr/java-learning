@@ -10,6 +10,7 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
 import cursojava.constantes.StatusAluno;
+import cursojava.insterfaces.PermitirAcesso;
 
 public class PrimeiraClasseJava {
 	
@@ -272,11 +273,14 @@ public class PrimeiraClasseJava {
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 		
 		
-		Secretario secretario = new Secretario();
+		/*Secretario secretario = new Secretario();
 		secretario.setLogin(login);
 		secretario.setSenha(senha);
 		
-		if(secretario.autenticar()) {
+		PermitirAcesso secretario = new Secretario();*/
+		
+		
+		if(new Secretario().autenticar(login,senha)) {
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
@@ -474,6 +478,9 @@ public class PrimeiraClasseJava {
 			
 		}*/
 		
+		}else {
+			
+			JOptionPane.showInternalMessageDialog(null, "Não permitido");
 		}
 		
 		/* Eguals e Hascode */
