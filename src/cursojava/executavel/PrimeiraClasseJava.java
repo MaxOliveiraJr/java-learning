@@ -7,8 +7,10 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 import cursojava.insterfaces.PermitirAcesso;
 
@@ -273,14 +275,33 @@ public class PrimeiraClasseJava {
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 		
 		
-		/*Secretario secretario = new Secretario();
+		/*
+		 * Secretario secretario = new Secretario();
 		secretario.setLogin(login);
 		secretario.setSenha(senha);
+		if(new Secretario().autenticar()) {
 		
-		PermitirAcesso secretario = new Secretario();*/
+		PermitirAcesso secretario = new Secretario();
+		if(secretario().autenticar(login,senha)) {
 		
+		*ou
+		*
+		*if(new Secretario().autenticar(login,senha)) {
+		*
 		
-		if(new Secretario().autenticar(login,senha)) {
+		PermitirAcesso permitirAcesso = new Secretario(login,senha);
+		if(permitirAcesso.autenticar()) {
+			*/
+		/*
+		FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();		
+		PermitirAcesso permitirAcesso = new Secretario(login,senha);
+		
+		if(autenticacao.autenticarCursoJava(permitirAcesso)) {
+*/
+		/*PermitirAcesso permitirAcesso = new Secretario(login,senha);
+		if(new FuncaoAutenticacao(permitirAcesso).autenticarCursoJava()) {*/
+		
+		if(new FuncaoAutenticacao(new Diretor(login,senha)).autenticarCursoJava()) {
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		

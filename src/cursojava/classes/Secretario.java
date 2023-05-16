@@ -11,6 +11,11 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 	private String login;
 	private String senha;
 	
+	public Secretario() {}
+	public Secretario(String login,String senha) {
+		this.login = login;
+		this.senha = senha;
+	}
 	
 	public String getLogin() {
 		return login;
@@ -54,17 +59,27 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 		return 3900.78;
 	}
 	
-	/*@Override
-	public boolean autenticar() {
-		// TODO Auto-generated method stub
-		return login.equals("admib") && senha.equals("admin");
-	}*/
-	
 	@Override
-	public boolean autenticar(String senha,String login) {
-		// TODO Auto-generated method stub
-		return login.equals("admib") && senha.equals("admin");
+	public boolean autenticar(String login,String senha) {
+		this.login = login;
+		this.senha = senha;
+		return autenticar();
 	}
 	
+
+
+	
+	@Override
+	public boolean autenticar() {
+		// TODO Auto-generated method stub
+		return login.equals("admin") && senha.equals("admin");
+	}
+	
+//	@Override
+//	public boolean autenticar(String senha,String login) {
+//		// TODO Auto-generated method stub
+//		return login.equals("admin") && senha.equals("admin");
+//	}
+//	
 	
 }
